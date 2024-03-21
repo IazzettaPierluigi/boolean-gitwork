@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use Faker\Factory as Faker;
 use App\Models\Movie;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class MovieSeeder extends Seeder
@@ -12,12 +11,12 @@ class MovieSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(Faker $faker): void
+    public function run()
     {
-        $faker = Movie::create();
+        $faker = Faker::create();
 
         foreach (range(1, 20) as $index) {
-            Movie::create('movies')->insert([
+            Movie::create([
                 'title' => $faker->sentence($nbWords = 4, $variableNbWords = true),
                 'regista' => $faker->name,
                 'data' => $faker->date($format = 'Y-m-d', $max = 'now'),
