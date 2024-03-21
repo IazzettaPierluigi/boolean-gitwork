@@ -5,6 +5,6 @@
 
 
 @section('content')
-    <h1>welcome page</h1>
+    <h1>welcome page3qerrwfgrwgrhyrre</h1>
      
 @endsection
