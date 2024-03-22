@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,5 @@ Route::get('/about', function () {
 
     return view('pages.about');
 })->name('aboutPage');
+
+Route::resource('movies', MovieController::class);
